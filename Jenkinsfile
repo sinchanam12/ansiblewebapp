@@ -22,7 +22,7 @@ archiveArtifacts artifacts:'target/*.war',fingerprint:true
 stage('Deploy'){
 steps{
 sh'mvn clean package'
-sh'ansible_playbook ansible/playbook.yml -i ansible/hosts.ini'
+sh'ansible-playbook ansible/playbook.yml -i ansible/hosts.ini'
 }
 }
 }
